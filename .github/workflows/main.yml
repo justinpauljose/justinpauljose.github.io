@@ -1,4 +1,4 @@
-name: Build, Test and Deploy
+name: Build
 on:
   push:
     branches:
@@ -10,10 +10,3 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@master
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    needs: build
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
